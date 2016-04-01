@@ -1,0 +1,42 @@
+<form class="form-horizontal" role="form"
+	ng-submit="addTipoEnvio( )">
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-group">
+				<label for="nombre_tipoenvio">Nombre:</label> <input type="text"
+					class="form-control" ng-model="tipoEnvioTemporal.name"
+					placeholder="Nombre envio..." id="nombre_tipoenvio" />
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="input-group">
+				<label for="duracion_tipoenvio">Duracion:</label> <input type="text"
+					class="form-control" ng-model="tipoEnvioTemporal.duracionViaje"
+					placeholder="Duracion viaje..." id="duracion_tipoenvio" />
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-group">
+				<label for="medio_tipoenvio">Medio</label> <input type="text"
+					class="form-control" ng-model="tipoEnvioTemporal.medioTransporte"
+					placeholder="Medio trasnporte.." id="medio_tipoenvio" />
+			</div>
+		</div>
+
+		<div class="col-xs-6">
+			<div class="input-group">
+				<label for="coste_tipoenvio">Coste:</label> <input type="text"
+					class="form-control" ng-model="tipoEnvioTemporal.costeTonelada"
+					placeholder="Coste tonelada..." id="coste_tipoenvio" />
+			</div>
+		</div>
+	</div>
+	<br> <span class="input-group-btn ">
+		<button class="btn btn-default" type="submit" title="Add">
+			<span class="glyphicon glyphicon-plus"></span>
+		</button>
+	</span>
+</form>
+<a href="" ng-click="go('/')">Back</a>

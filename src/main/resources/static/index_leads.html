@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Gestion de leads</title>
+<link rel="stylesheet"
+	href="/webjars/bootstrap/3.3.6/css/bootstrap.min.css" />
+
+</head>
+<body ng-app="myApp">
+	<div class="container" ng-controller="LeadController">
+		<div class="page-header">
+			<h1>Leads en Salesforce</h1>
+		</div>
+		<div ng-repeat="lead in leads">
+		{{lead.name}} en {{lead.company}}
+		</div>
+		<form class="form-horizontal" role="form" ng-submit="addLead(name, company)">
+		<input type="text" class="form-control" ng-model="name"
+			placeholder="Enter the name..." />
+		<input type="text" class="form-control" ng-model="company"
+			placeholder="Enter the company..." />
+            <button class="btn btn-default" type="submit" title="Add">
+              <span class="glyphicon glyphicon-plus"></span>
+            </button>
+		</form>
+	</div>
+
+	<script type="text/javascript"
+		src="/webjars/angularjs/1.4.9/angular.min.js"></script>
+	<script type="text/javascript"
+		src="/webjars/angularjs/1.4.9/angular-resource.min.js"></script>
+	<script type="text/javascript"
+		src="/webjars/lodash/3.10.1/lodash.min.js"></script>
+	<script type="text/javascript" src="./app/app.js"></script>
+	<script type="text/javascript" src="./app/controllers.js"></script>
+	<script type="text/javascript" src="./app/services.js"></script>
+
+</body>
+</html>
